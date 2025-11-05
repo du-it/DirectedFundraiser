@@ -149,7 +149,7 @@ Das Hardhat-Skript zur automatisierten Bereitstellung ist unter *`scripts/deploy
 Geplant ist die Ergänzung eines Skripts für ein geschedultes Deployment auf eine Blockchain – z. B. zeitgesteuert oder ereignisgesteuert.  
 Das Projekt dient als Grundlage für weitere Experimente mit Off-Chain-Triggern, Event-Listenern und automatisierter Bereitstellung.
 
-## <img src="emoji-style-solidity-book-icon.svg" width="20" alt="Solidity Lernbuch Icon"> Hintergrund
+## 📘 Hintergrund
 Dieses Repository ist Teil meines autodidaktischen Lernwegs rund um Smart Contracts, Solidity und Blockchain-Entwicklung.
 Der Contract entstand im Rahmen praktischer Experimente mit Remix und dient der technischen Vertiefung sowie der Vorbereitung auf reale Anwendungsszenarien.
 
