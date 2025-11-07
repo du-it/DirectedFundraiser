@@ -1,5 +1,7 @@
 # 🎯 DirectedFundraiser – Zweckgebundenes Fundraising per Smart Contract
 
+---
+
 Dieses Projekt zeigt, wie man mit Solidity einen transparenten, zielgerichteten Spendenprozess auf Ethereum abbildet.
 
 ## 🚀 Was macht der Contract?
@@ -8,120 +10,6 @@ Dieses Projekt zeigt, wie man mit Solidity einen transparenten, zielgerichteten 
 - 📊 Zeigt den Fortschritt in Prozent
 - ⏳ Akzeptiert Spenden nur im festgelegten Zeitraum
 - 🔐 Nur der Empfänger kann nach Ablauf die Mittel abheben
-
----
-
-## ⚙️ Setup und Ausführung (Hardhat Monorepo)
-
-Dieses Projekt verwendet eine **zentrale Hardhat-Struktur** (Monorepo), um zukünftige Contracts im selben Repository zu verwalten. Die folgenden Schritte beschreiben, wie man das Projekt lokal einrichtet und den Contract deployt.
-
-### Voraussetzungen
-1.  **Node.js LTS v20** oder neuer (Node.js LTS v20 wird empfohlen).
-2.  **npm** (Node Package Manager).
-
-### 1. Struktur und Dateien anlegen
-
-Navigieren Sie in das Stammverzeichnis (`/Ethereum`) und erstellen Sie die notwendige, Hardhat-konforme Monorepo-Struktur:
-
-```
-# Basisstruktur initialisieren und Ordner erstellen
-npm init -y
-mkdir contracts
-mkdir scripts
-mkdir contracts/DirectFundraiser
-```
-
-> **Wichtig:** Ihr Contract (`DirectedFundraiser.sol`) muss in `contracts/DirectFundraiser/` und Ihr Deployment-Skript (`deploy_directedFundraiser.ts`) in `scripts/` liegen.
-
-### 2. Hardhat und Tools installieren
-
-Installieren Sie Hardhat (v2.22.0), die kompatiblen Ethers v6 Plugins (`@nomicfoundation`) sowie TypeScript für die Skriptausführung:
-
-```
-# Hardhat Core und kompatible Plugins (Ethers v6) installieren
-npm install --save-dev hardhat@2.22.0 @nomicfoundation/hardhat-ethers@3.1.2 @nomicfoundation/hardhat-chai-matchers@2.1.0
-
-# TypeScript und ts-node für die Skriptausführung installieren
-npm install --save-dev typescript @types/node ts-node
-```
-
-### 3. Konfigurationsdateien hinzufügen
-
-Erstellen Sie die folgenden Konfigurationsdateien im Stammverzeichnis (`/Ethereum`):
-
-#### A. `hardhat.config.ts`
-
-Diese Konfiguration nutzt den Standardpfad `./contracts` und bindet die Ethers v6 Plugins ein:
-
-```typescript
-// hardhat.config.ts
-import type { HardhatUserConfig } from "hardhat/config";
-import "@nomicfoundation/hardhat-ethers"; 
-import "@nomicfoundation/hardhat-chai-matchers";
-
-const config: HardhatUserConfig = {
-  solidity: {
-    version: "0.8.20", 
-    settings: {
-      optimizer: {
-        enabled: true,
-        runs: 200,
-      },
-    },
-  },
-  
-  paths: {
-    sources: "./contracts", 
-    tests: "./test",
-    cache: "./cache",
-    artifacts: "./artifacts"
-  },
-  
-  networks: {
-    localhost: {
-      url: "http://127.0.0.1:8545",
-    },
-  },
-};
-
-export default config;
-```
-
-#### B. `tsconfig.json`
-
-Diese TypeScript-Konfiguration behebt Kompatibilitätsprobleme mit Node.js v20:
-
-```json
-// tsconfig.json
-{
-  "compilerOptions": {
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext", 
-    "target": "es2020",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true
-  },
-  "include": ["./scripts", "./test", "./typechain-types"],
-  "files": ["./hardhat.config.ts"]
-}
-```
-
-### 4. Contract Deployment (Lokales Testnetz)
-
-Führen Sie das vorbereitete Deployment-Skript aus, um den Contract auf dem lokalen Hardhat Network bereitzustellen:
-
-```
-npx hardhat run scripts/deploy_directedFundraiser.ts
-```
-
-**Erwartete Ausgabe:** Das Skript kompiliert den Contract und gibt die Adresse aus, unter der der `DirectedFundraiser` Contract deployt wurde.
-
-```
-...
-✅ DirectedFundraiser deployed to: 0x...
-```
 
 ---
 
@@ -140,10 +28,14 @@ Dieses Projekt demonstriert:
 
 ## 🧪 Testnet / Remix
 Der Contract ist für Remix optimiert und kann direkt dort getestet werden.  
-Ein Deployment kann auf Sepolia oder andere Testnets erfolgen.
+Ein Deployment kann auf Sepolia oder andere Testnets erfolgen.  
+👉 Für Entwicklung mit Remix siehe [`README.remix.md`](./README.remix.md)  
+👉 Für lokale Entwicklung siehe [`README.remix.md` auf GitHub](https://github.com/du-it/DirectedFundraiser/blob/main/README.remix.md)
 
 ## 📦 Deployment-Skript (optional)
-Das Hardhat-Skript zur automatisierten Bereitstellung ist unter *`scripts/deploy_directedFundraiser.ts`** hinterlegt.
+Das Hardhat-Skript zur automatisierten Bereitstellung ist unter *`scripts/deploy_directedFundraiser.ts`** hinterlegt.  
+👉 Für lokale Entwicklung mit Hardhat siehe [`README.hardhat.md`](./README.hardhat.md)  
+👉 Für lokale Entwicklung siehe [`README.hardhat.md` auf GitHub](https://github.com/du-it/DirectedFundraiser/blob/main/README.hardhat.md)
 
 ## 🧠 Weiterentwicklung
 Geplant ist die Ergänzung eines Skripts für ein geschedultes Deployment auf eine Blockchain – z. B. zeitgesteuert oder ereignisgesteuert.  
