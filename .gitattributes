@@ -1,4 +1,4 @@
-# Bilder als Binärdateien kennzeichnen
-*.png binary
-*.jpg binary
-*.jpeg binary
+# Binärdateien mit EOL-Fix
+*.png binary -text eol=lf
+*.jpg binary -text eol=lf
+*.jpeg binary -text eol=lf
