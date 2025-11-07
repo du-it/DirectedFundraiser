@@ -19,6 +19,7 @@ Dieses Projekt zeigt, wie man mit Solidity einen transparenten, zielgerichteten 
 - `withdrawFunds() ` – ermöglicht dem Empfänger die Auszahlung nach Ablauf
 - `Donation[]` – vollständige Spendenhistorie inkl. Zeitstempel
 
+
 Dieses Projekt demonstriert:
 - saubere Rollenlogik (Initiator, Beneficiary, Spender)
 - reproduzierbare Workflows für Solidity-Entwicklung
