@@ -1,6 +1,5 @@
 # 🎯 DirectedFundraiser – Zweckgebundenes Fundraising per Smart Contract
 
----
 
 ## ⚙️ Setup und Ausführung (Hardhat Monorepo)
 
