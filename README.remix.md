@@ -24,7 +24,7 @@ Der Contract wurde erfolgreich über [Remix IDE](https://remix.ethereum.org) auf
 Netzwerk-Adresse erhalten.  
 Der delpoyte Smart Contract kann unter [Etherscan](https://sepolia.etherscan.io/) eingesehen werden.
 
-![Directed_FundRaiser Smart Contract](https://github.com/du-it/DirectedFundraiser/blob/main/images/Etherscan%20-%20Smart%20Contract%20deployed.png)
+![Directed_FundRaiser Smart Contract](https://raw.githubusercontent.com/du-it/DirectedFundraiser/main/images/Etherscan%20-%20Smart%20Contract%20deployed.png)  
 
 ---
 
