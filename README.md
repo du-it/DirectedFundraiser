@@ -1,6 +1,5 @@
 # 🎯 DirectedFundraiser – Zweckgebundenes Fundraising per Smart Contract
 
----
 
 Dieses Projekt zeigt, wie man mit Solidity einen transparenten, zielgerichteten Spendenprozess auf Ethereum abbildet.
 
