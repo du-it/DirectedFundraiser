@@ -1,6 +1,6 @@
 import sgMail from "@sendgrid/mail";
 import { ethers } from "ethers";
-import "../scripts/loadEnv"; // lädt .env automatisch aus Projekt-Root
+import { loadEnv } from "../../../scripts/loadEnv"; // lädt .env automatisch aus Projekt-Root
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 

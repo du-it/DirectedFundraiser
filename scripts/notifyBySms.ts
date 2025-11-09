@@ -1,6 +1,6 @@
 import twilio from "twilio";
 import { ethers } from "ethers";
-import "../scripts/loadEnv"; // lädt .env automatisch aus Projekt-Root
+import { loadEnv } from "../../../scripts/loadEnv"; // lädt .env automatisch aus Projekt-Root
 
 const client = twilio(process.env.TWILIO_SID!, process.env.TWILIO_TOKEN!);
 
