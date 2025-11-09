@@ -6,6 +6,7 @@ contract DirectedFundraiser {
     address public beneficiary;
     uint public goalAmount;
     uint public totalDonations;
+    string public description;
 
     struct Donation {
         address donor;
@@ -18,11 +19,15 @@ contract DirectedFundraiser {
 
     event DonationReceived(address indexed donor, uint amount, string message, uint timestamp);
     event FundsWithdrawn(address indexed beneficiary, uint amount);
+    event FundraiserCreated(address indexed initiator, address indexed beneficiary, uint goalAmount, string description);
 
-    constructor(address _beneficiary, uint _goalAmount) {
+    constructor(address _beneficiary, uint _goalAmount, string memory _description) {
         initiator = msg.sender;
         beneficiary = _beneficiary;
         goalAmount = _goalAmount;
+        description = _description;
+
+        emit FundraiserCreated(initiator, beneficiary, goalAmount, description);
     }
 
     function donate(string memory message) public payable {

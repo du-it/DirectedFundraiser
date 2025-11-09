@@ -21,7 +21,8 @@ async function main() {
     console.log(`Goal Amount set to (10 ETH in Wei): ${goalAmount.toString()}`);
 
 	// 4. Contract deployen (Das 'await' hier sendet die Transaktion)
-    const contract = await Contract.deploy(beneficiary, goalAmount);
+    const description = "Diese Spendenaktion unterstützt den Wiederaufbau der Grundschule in Schönwalde-Glien nach dem Hochwasser im Oktober 2025.";
+    const contract = await Contract.deploy(beneficiary, goalAmount, description);
     
     // 💡 NEU: Auf das Transaction Receipt warten, um die Adresse zu extrahieren.
     const receipt = await contract.deploymentTransaction()?.wait();
