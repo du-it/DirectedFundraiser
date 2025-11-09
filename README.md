@@ -1,9 +1,11 @@
 # 🎯 DirectedFundraiser – Zweckgebundenes Fundraising per Smart Contract
 
 
+
 Dieses Projekt zeigt, wie man mit Solidity einen transparenten, zielgerichteten Spendenprozess auf Ethereum abbildet.
 
 ## 🚀 Was macht der Contract?
+- 🎯 Zweck der Spendenaktion
 - 📥 Empfängt Spenden von beliebigen Adressen
 - 🎯 Verfolgt einen definierten Zielbetrag
 - 📊 Zeigt den Fortschritt in Prozent
@@ -11,6 +13,9 @@ Dieses Projekt zeigt, wie man mit Solidity einen transparenten, zielgerichteten 
 - 🔐 Nur der Empfänger kann nach Ablauf die Mittel abheben
 
 ---
+
+## 🎯 Zweck der Spendenaktion
+Diese Spendenaktion unterstützt den Wiederaufbau der Grundschule in Schönwalde-Glien nach dem Hochwasser im Oktober 2025. Alle gesammelten Mittel gehen direkt an die Schule, sobald das Spendenziel erreicht ist oder der Empfänger die Auszahlung veranlasst.
 
 ## 🔍 Features im Detail
 - `donate(string message)` – Spendenfunktion mit optionaler Nachricht

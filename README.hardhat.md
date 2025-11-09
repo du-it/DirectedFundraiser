@@ -1,6 +1,7 @@
 # 🎯 DirectedFundraiser – Zweckgebundenes Fundraising per Smart Contract
 
 
+
 ## ⚙️ Setup und Ausführung (Hardhat Monorepo)
 
 Dieses Projekt verwendet eine **zentrale Hardhat-Struktur** (Monorepo), um zukünftige Contracts im selben Repository zu verwalten. Die folgenden Schritte beschreiben, wie man das Projekt lokal einrichtet und den Contract deployt.
