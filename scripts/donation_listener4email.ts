@@ -1,5 +1,5 @@
 import { ethers } from "ethers";
-import { sendSMS } from "./notifyBySms";
+import { sendEmail } from "./notifyByEmail";
 
 
 const provider = new ethers.JsonRpcProvider("https://mainnet.infura.io/v3/b01d342827ae465ca56906b069c9eefc");
@@ -16,5 +16,5 @@ contract.on("DonationReceived", async (donor, amount, message, timestamp) => {
   const email = "beneficiary@example.com";
   const phone = "+491751234567";
 
-  await sendSMS(phone, donor, amount);
+  await sendEmail(email, donor, amount, message);
 });
