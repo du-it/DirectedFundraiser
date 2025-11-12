@@ -50,5 +50,6 @@ Das Projekt dient als Grundlage für weitere Experimente mit Off-Chain-Triggern,
 Dieses Repository ist Teil meines autodidaktischen Lernwegs rund um Smart Contracts, Solidity und Blockchain-Entwicklung.
 Der Contract entstand im Rahmen praktischer Experimente mit Remix und dient der technischen Vertiefung sowie der Vorbereitung auf reale Anwendungsszenarien.
 
- ## 📬 Kontakt
-Fragen, Feedback oder Interesse? Gerne per GitHub oder direkt.
+## 📫 Kontakt
+📧 d.ulrich@du-it.de  
+🌐 [GitHub-Profil](https://github.com/du-it)
